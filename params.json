@@ -1,0 +1,6 @@
+{
+  "name": "Simple-bruteforce-script",
+  "tagline": "A Simple Bruteforce Script that runs using PHP and JavaScript",
+  "body": "# Simple-Bruteforce-Script\r\n_A Simple Bruteforce Script that runs using PHP and JavaScript_\r\n\r\n***\r\n\r\nThis Script will, once completed run a set of characters through a selected form, through either an action or AJAX, depending on the script/\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
