@@ -23,7 +23,7 @@
             var compare = !regex.test(data);
             if(data) { // If data exists
               if(compare ==  false){ // Check for possible login success messages
-                $(stuff).html('Submitted - Possible Success | <a href="" onclick="event.preventDefault(); alert('+data1+')">View Output</a>'); // Inform user of possible success
+                $(stuff).html('Submitted - Possible Success | <a href="" onclick="event.preventDefault(); openThisWindow('+data1+')">View Output</a>'); // Inform user of possible success
                 var scount = parseInt($('.scount').text(),10); // Find the numerical value of scount
                 if(scount => 1){
                   $(me).addClass('top-'+scount)
@@ -31,7 +31,7 @@
                 $('.scount').text(scount+1); // Increment scount by one
                 $(me).addClass('float-top');
               } else { // If no possible success messages
-                $(stuff).html('Submitted <a href="" onclick="event.preventDefault(); alert('+data1+')">View Output</a>'); // Inform user of successful submission
+                $(stuff).html('Submitted <a href="" onclick="event.preventDefault(); openThisWindow('+data1+')">View Output</a>'); // Inform user of successful submission
               }
               var count = parseInt($('.count').text(),10); // Find the numerical value of count
               $('.count').text(count+1); // Increment count by one
