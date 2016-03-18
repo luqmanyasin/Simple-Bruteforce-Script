@@ -3,6 +3,7 @@
   var scount = 0; // Set the variable scount to 0
   $('.sub').click(function(e){ // On click of the class sub
     e.preventDefault(); // Prevent the default action
+    alert('test');
     var stuff = $(this).parent().find('.stuff'); // Find the class stuff
     var name = $(this).parent().find('.value').val(); // Find the class value
     var me = $(this).parent();
