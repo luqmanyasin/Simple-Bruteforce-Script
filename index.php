@@ -58,11 +58,6 @@
     <div class="row">
       <div class="offset-by-three one-half column" style="margin-top: 50px;">
         <div class="forms">
-          <div class="countcont">
-            Successfully submitted: 
-            <span class="count">0</span> | Possible Successes: <span class="scount">0</span>
-          </div>
-          <a href="" class="suball">Submit All</a>
         </div>
       </div>
     </div>
@@ -81,7 +76,9 @@
     var values = $_GET('values');
     if(!named || !action || !method || !values){
       $('.forms').append('<form action="" style="margin:50px auto" method="GET"><input type="text" name="m" placeholder="Form Method" class="u-full-width" /> <br /> <input type="text" name="n" placeholder="Input name" class="u-full-width" /> <br /> <input type="text" name="a" placeholder="Action URL" class="u-full-width" /> <br /> <textarea name="values" placeholder="Enter Values - Seperate each character with a \',\' comma." class="u-full-width" ></textarea> <br /> <input type="submit"  class="u-full-width"/> </form>');
+      throw new Error();
     }
+    $('.forms').append('<div class="countcont">Successfully submitted:  <span class="count">0</span> | Possible Successes: <span class="scount">0</span> </div> <a href="" class="suball">Submit All</a>');
     var values = values.replace(/\%2C/g, ',');
     console.log(values);
     var arrys = getComb(values);
