@@ -67,6 +67,11 @@ if(strlen($_GET['values']) > 1 && isset($_GET['m']) && isset($_GET['a']) && isse
   $name = $_GET[n]; // Assign the get request to a variable
   $init = new init($_GET['values']);
   $results = $init->getComb();  // Run the funtion getComb using the input values to results
+  $count = ((count(str_split($_GET['values']))+1)/2);
+  if($count >= 6):
+    print "This Script currently only supports upto 5 characters.";
+    exit;
+  endif;
 ?>
 <div class="countcont">Successfully submitted: <span class="count">0</span> | Possible Successes: <span class="scount">0</span> </div>
 <a href="" class="suball">Submit All</a>
