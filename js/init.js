@@ -36,3 +36,7 @@ function $_GET(param) {
 	}
 	return vars;
 }
+function openThisWindow(data) { 
+  var w = window.open("", "Form Output", "width=600,height=700");
+  $(w.document.body).html(data) 
+}
