@@ -57,12 +57,13 @@
   <div class="container">
     <div class="row">
       <div class="offset-by-three one-half column" style="margin-top: 50px;">
-        <div class="countcont">
-          Successfully submitted: 
-          <span class="count">0</span> | Possible Successes: <span class="scount">0</span>
+        <div class="forms">
+          <div class="countcont">
+            Successfully submitted: 
+            <span class="count">0</span> | Possible Successes: <span class="scount">0</span>
+          </div>
+          <a href="" class="suball">Submit All</a>
         </div>
-        <a href="" class="suball">Submit All</a>
-        <div class="forms"></div>
       </div>
     </div>
   </div>
