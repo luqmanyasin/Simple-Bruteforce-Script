@@ -7,12 +7,17 @@ function shuffleArray(array) {
   }
   return array;
 }
-function getComb(array) {
+function getComb(array, type) {
   var arr = array.split(',');
   var arrCount = arr.length;
   maxComb = Math.pow(arrCount, arrCount);
   var res = [];
-  if(arrCount > 1) {
+  if(type == 2 && arrCount>1) {
+    for(i=0;i<arrCount;i++) {
+      res.push(arr[i]);
+    }
+  }
+  if(type == 1 && arrCount > 1) {
     for(i=0;i<maxComb;i++){
       shuffleArray(arr);
       if($.inArray(arr.join(''), res) == -1){
