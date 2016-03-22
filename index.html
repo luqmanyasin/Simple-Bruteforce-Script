@@ -66,9 +66,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 <script src="js/init.min.js"></script>
 <script>
-  var successArr 	= ['success', 'logged in', 'successful', 'welcome', 'hello', 'successfully', 'redirecting', 'please wait']; // Array of keywords that could be interpreted as successful
+  var successArr 	= ['success', 'logged in', 'successful', 'welcome', 'hello', 'successfully', 'redirecting', 'please wait', '1', 'true']; // Array of keywords that could be interpreted as successful
   var method 		= $_GET('m');
-  var action 		= $_GET('a');
+  var action 		= decodeURIComponent($_GET('a'));
+  console.log(action);
   var named 		= $_GET('n');
   var user 		= $_GET('u');
   var userFormName 	= $_GET('un');
