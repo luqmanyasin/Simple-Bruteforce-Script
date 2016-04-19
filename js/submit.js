@@ -10,11 +10,11 @@
     var scount = 0; // Set scount to 0
     $('.count').text(count); // Set the the variable count to class count
     $('.scount').text(scount); // Set the the variable scount to class scount
-    var string = named+'='+name+'&'+userFormName+'='+user; // Set variable string to the php variable name plus the js variable name
+    var string = config.named+'='+config.name+'&'+config.userFormName+'='+config.user; // Set variable string to the php variable name plus the js variable name
       if($.trim(name).length > 0) { // Set the length of name is more than 0
         $.ajax({ // Initialise ajax
-          type: method, // Set type to the php method
-          url: action, // Set url to the php action
+          type: config.method, // Set type to the php method
+          url: config.action, // Set url to the php action
           data: string, // set data to string
           cache: false, // Disable cache
           beforeSend: function(){ $(stuff).html('Submitting'); }, // Add a loading message whilst the request is pending

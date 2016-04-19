@@ -66,6 +66,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 <script src="js/init.min.js"></script>
 <script>
+  var config = { method: $_GET('m'), action: decodeURIComponent($_GET('a')), named: $_GET('n'), name: $_GET('n'), user: $_GET('u'), userFormName: $_GET('un'), type: $_GET('type'), successArr: [] };
+  config.successArr = ['success', 'logged in', 'successful', 'welcome', 'hello', 'successfully', 'redirecting', 'please wait', user, 'hello '+user, 'welcome '+user, 'hello, '+user, 'welcome, '+user, '1', 'true', 1]; // Array of keywords that could be interpreted as successful
   var method 		= $_GET('m');
   var action 		= decodeURIComponent($_GET('a'));
   console.log(action);
